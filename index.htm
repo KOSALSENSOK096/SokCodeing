@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>រៀនកូដជាមួយ SokCodeing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#lessons">Lessons</a></li>
+            <li><a href="#bot">Bot</a></li>
+            <li><a href="#terminal">Terminal</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <header>
+            <h1>រៀនកូដជាមួយ SokCodeing</h1>
+            <p>សូមរៀនកូដដោយប្រើការបង្រៀនតាមអ៊ីនធឺណិត!</p>
+        </header>
+
+        <div id="home" class="section">
+            <h2>Welcome to SokCodeing!</h2>
+            <p>Your one-stop solution for learning coding online!</p>
+        </div>
+
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <p>We provide an interactive way of learning coding using HTML, CSS, JavaScript, and more!</p>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out for support!</p>
+        </div>
+
+        <div id="lessons" class="section">
+            <h2>Lessons</h2>
+            <div id="lessons-list"></div>
+        </div>
+
+        <div id="bot" class="section">
+            <h2>AI Bot</h2>
+            <div id="chat-box">
+                <div id="chat-log">
+                    <p><strong>Bot:</strong> Hello! How can I help you learn coding today?</p>
+                </div>
+                <input type="text" id="user-input" placeholder="Ask the bot..." />
+                <button id="ask-btn">Ask</button>
+                <p id="bot-response"></p>
+            </div>
+        </div>
+
+        <div id="terminal" class="section">
+            <h2>Terminal</h2>
+            <div id="code-terminal">
+                <textarea id="code-input" placeholder="Write your code here..."></textarea>
+                <button id="run-code-btn">Run Code</button>
+                <pre id="code-output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SokCodeing. រក្សាសិទិ្ធអាជ្ញាប័ណ្ណ។</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
