@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #f9f9f9;
+    background: #f1f1f1;
     color: #333;
     overflow-x: hidden;
 }
@@ -19,9 +19,14 @@ body {
     left: 0;
     width: 250px;
     height: 100%;
-    background: linear-gradient(180deg, #333, #555);
+    background: linear-gradient(180deg, #007acc, #00b5e2);
     color: #fff;
     padding: 20px;
+    transition: width 0.3s ease;
+}
+
+#sidebar:hover {
+    width: 280px;
 }
 
 .sidebar-header h2 {
@@ -45,34 +50,37 @@ body {
     display: block;
     padding: 10px;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .sidebar-links a:hover {
-    background: #ffa500;
+    background: #ff8c00;
+    color: #fff;
 }
 
 /* Content Styling */
 #content {
     margin-left: 270px;
     padding: 20px;
+    transition: margin-left 0.3s ease;
 }
 
 header {
     text-align: center;
-    padding: 30px 20px;
-    background: linear-gradient(90deg, #333, #ffa500);
+    padding: 40px 20px;
+    background: linear-gradient(90deg, #333, #007acc);
     color: #fff;
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-top: 10px;
 }
 
@@ -83,12 +91,17 @@ header p {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Lessons Cards */
+.section:hover {
+    transform: translateY(-5px);
+}
+
+/* Lesson Cards */
 .lesson-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
@@ -97,12 +110,13 @@ header p {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card img, .card video {
@@ -117,7 +131,7 @@ header p {
 }
 
 .card a {
-    color: #ffa500;
+    color: #ff8c00;
     text-decoration: none;
     font-weight: bold;
 }
@@ -126,30 +140,56 @@ header p {
     text-decoration: underline;
 }
 
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-    border-radius: 10px;
-    margin-top: 20px;
+/* Resource Cards */
+.resource-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-footer a {
-    color: #ffa500;
+.resource-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    margin-bottom: 10px;
+}
+
+.resource-card a {
+    color: #ff8c00;
     text-decoration: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
+.resource-card a:hover {
+    text-decoration: underline;
+}
 
-    #content {
-        margin-left: 0;
-    }
+/* Footer Styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
