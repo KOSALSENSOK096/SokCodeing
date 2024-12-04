@@ -4,28 +4,24 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #f7f7f7;
 }
 
 /* Custom Cursor */
 #cursor {
     position: fixed;
-    background-color: #ff8c00;
-    width: 20px;
-    height: 20px;
+    background-color: #ff5722;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     pointer-events: none;
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
     transform: translate(-50%, -50%);
-}
-
-body:hover #cursor {
-    background-color: #ff5722;
 }
 
 /* Sidebar Styles */
 #sidebar {
-    background-color: #333;
+    background-color: #222;
     color: white;
     width: 250px;
     position: fixed;
@@ -33,10 +29,13 @@ body:hover #cursor {
     left: 0;
     height: 100%;
     padding: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-header h2 {
-    font-size: 1.8em;
+    font-size: 2em;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .sidebar-links {
@@ -54,10 +53,12 @@ body:hover #cursor {
     font-size: 1.2em;
     display: block;
     transition: color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .sidebar-links a:hover {
-    color: #ff8c00;
+    background-color: #ff5722;
 }
 
 /* Main Content */
@@ -66,17 +67,20 @@ body:hover #cursor {
     padding: 20px;
 }
 
+/* Parallax Header */
 .parallax {
-    background-image: url('background.jpg'); /* Add your background image here */
+    background-image: url('background.jpg'); /* Add your background image */
     background-attachment: fixed;
     color: white;
     padding: 100px 20px;
     text-align: center;
     background-size: cover;
+    position: relative;
+    z-index: 1;
 }
 
 .parallax h1 {
-    font-size: 3em;
+    font-size: 4em;
     margin: 0;
 }
 
@@ -84,7 +88,7 @@ body:hover #cursor {
     font-size: 1.5em;
 }
 
-/* AI Chatbot Styles */
+/* Bot Terminal Styles */
 .bot-terminal {
     display: none;
     padding: 20px;
@@ -109,12 +113,15 @@ body:hover #cursor {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #messages {
     overflow-y: auto;
     flex-grow: 1;
     margin-bottom: 10px;
+    max-height: 300px;
+    padding-right: 10px;
 }
 
 #user-input {
@@ -123,10 +130,11 @@ body:hover #cursor {
     border-radius: 5px;
     width: calc(100% - 80px);
     margin-right: 10px;
+    font-size: 1em;
 }
 
 button {
-    background-color: #007acc;
+    background-color: #ff5722;
     color: white;
     border: none;
     padding: 10px;
@@ -137,7 +145,43 @@ button {
 }
 
 button:hover {
-    background-color: #005f8c;
+    background-color: #e64a19;
+}
+
+/* Message Styles */
+.user {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    align-self: flex-end;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.bot {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    align-self: flex-start;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+#user-input:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+button:focus {
+    outline: none;
+}
+
+#chatbox {
+    margin-bottom: 15px;
 }
 
 /* Fade In Animation */
