@@ -23,6 +23,7 @@
             <li><a href="#contact">📞 Contact</a></li>
             <li><a href="#lessons">📚 Lessons</a></li>
             <li><a href="#resources">📂 Resources</a></li>
+            <li><a href="#bot-terminal" id="bot-link">🤖 Bot Terminal</a></li> <!-- New bot terminal link -->
         </ul>
     </div>
 
@@ -106,6 +107,16 @@
                     <p>Join our community to discuss coding topics and more!</p>
                     <a href="#">Join Forum</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- AI Bot Terminal Section -->
+        <section id="bot-terminal" class="section bot-terminal fadeIn">
+            <h2>AI Chatbot</h2>
+            <div id="chatbox">
+                <div id="messages"></div>
+                <input type="text" id="user-input" placeholder="Ask me anything..." />
+                <button onclick="sendMessage()">Send</button>
             </div>
         </section>
     </div>
